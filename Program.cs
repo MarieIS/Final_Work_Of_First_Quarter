@@ -6,9 +6,7 @@
    }
    else
    {
-     Console.WriteLine("The array: ");
-     Array.ForEach(array, (str) => Console.Write($"{str} "));
-     Console.WriteLine();
+     Console.WriteLine("[" + string.Join(", ", array) + "]");
    } 
 }
 
@@ -46,6 +44,8 @@ int GetNumberAmount(string message)
 
 int number1 = GetNumberAmount("Введите желаемое количество элементов массива: ");
 string [] arr1 = GetAnArray(number1);
+Console.WriteLine("The first array: ");
 PrintArray(arr1);
 string [] arr2 = GetNewArray(arr1);
+Console.WriteLine("The second array: ");
 PrintArray(arr2);
